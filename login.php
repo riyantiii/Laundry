@@ -24,9 +24,9 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="forms/vendors/styles/core.css">
-	<link rel="stylesheet" type="text/css" href="forms/vendors/styles/icon-font.css">
-	<link rel="stylesheet" type="text/css" href="forms/vendors/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendors/styles/icon-font.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendors/styles/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -54,13 +54,7 @@
 		</div>
 	</div>
 	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
-		<div class="container">
-		<div class="alert alert-info alert-dismissible fade show" role="alert">
-								<strong> Username Dan Password Salah!</strong> Tolong Coba Kembali.
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
+		
 			<div class="row align-items-center">
 				<div class="col-md-6 col-lg-7">
 					<img src="images/thumbs/pppp-removebg-preview.png" alt="">
@@ -123,9 +117,9 @@
 		</div>
 	</div>
 	<!-- js -->
-	<script src="forms/vendors/scripts/core.js"></script>
-	<script src="forms/vendors/scripts/script.min.js"></script>
-	<script src="forms/vendors/scripts/process.js"></script>
-	<script src="forms/vendors/scripts/layout-settings.js"></script>
+	<script src="assets/vendors/scripts/core.js"></script>
+	<script src="assets/vendors/scripts/script.min.js"></script>
+	<script src="assets/vendors/scripts/process.js"></script>
+	<script src="assets/vendors/scripts/layout-settings.js"></script>
 </body>
 </html>
