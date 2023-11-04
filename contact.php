@@ -35,17 +35,15 @@
     <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-     
-		<a class="nav-link" href="index.php">Beranda</a>
-        </li>
-          <a class="nav-link" href="about.php">About</a>
-        </li>
-          <a class="nav-link" href="contact.php">Contact</a>
-        </li>
-		<a class="nav-link" href="login.html">Login</a>
+	 <b> <a href="index.php" class="btn btn-lightpx-2 py-2 mt-2"><b>Beranda</a>
+	  <a href="about.php" class="btn btn-light px-2 py-2 mt-2"><b>About</a>
+	  <a href="contact.php" class="btn btn-light px-2 py-2 mt-2"><b>Contact</a>
+	  <a href="login.php" class="btn btn-primary px-2 py-2 mt-2"><b>Login</a>
     </div>
   </div>
+  </div>
 </nav>
+
 <!--====================================
 =            Hero Section            =
 =====================================-->
