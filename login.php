@@ -11,7 +11,7 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>Halaman Admin</title>
+	<title>Halaman Login</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="images/thumbs/pppp-removebg-preview.png">
