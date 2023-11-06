@@ -278,14 +278,6 @@ $koneksi = new mysqli ("localhost","root","","user");
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
 							<div class="dropdown">
-								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-									January 2018
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#">Export List</a>
-									<a class="dropdown-item" href="#">Policies</a>
-									<a class="dropdown-item" href="#">View Assets</a>
-								</div>
 						     	</div>
 						</div>
 					</div>
@@ -335,8 +327,8 @@ $koneksi = new mysqli ("localhost","root","","user");
 
 
 												<td>
-													<a href="edit.php?kode=<?php echo $data['id_outlet']; ?>" class="-am-pm-btn btn-warning btn-sm icon-copy fa fa-pencil"><b>Ubah</a>
-													<a href="del.php?kode=<?php echo $data['id_outlet']; ?>" onclick="return confirm('Yakin Ingin Hapus Data Ini ?')"
+													<a href="edit.php?id_outlet=<?php echo $data['id_outlet']; ?>" class="-am-pm-btn btn-warning btn-sm icon-copy fa fa-pencil"><b>Ubah</a>
+													<a href="del.php?id_outlet=<?php echo $data['id_outlet']; ?>" onclick="return confirm('Yakin Ingin Hapus Data Ini ?')"
 													class="-am-pm-btn btn-danger btn-sm icon-copy fa fa-trash"><b> Hapus</a>
 												</td>
 											</tr>

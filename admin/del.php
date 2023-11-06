@@ -1,7 +1,7 @@
 <?php
 $koneksi = new mysqli ("localhost","root","","user");
-if(isset($_GET['kode'])){
-	$sql_cek = "SELECT * FROM tb_outlet WHERE id_outlet='".$_GET['kode']."'";
+if(isset($_GET['id_outlet'])){
+	$sql_cek = "SELECT * FROM tb_outlet WHERE id_outlet='".$_GET['id_outlet']."'";
 	$query_cek = mysqli_query($koneksi, $sql_cek);
 	$data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
 }
@@ -10,7 +10,7 @@ if(isset($_GET['kode'])){
 <?php
   
 
-    $sql_hapus = "DELETE FROM tb_outlet WHERE id_outlet='".$_GET['kode']."'";
+    $sql_hapus = "DELETE FROM tb_outlet WHERE id_outlet='".$_GET['id_outlet']."'";
     $query_hapus = mysqli_query($koneksi, $sql_hapus);
     if ($query_hapus) {
         echo "<script>alert('Hapus Data Sukses')</script>";
