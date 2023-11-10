@@ -7,7 +7,7 @@ $koneksi = new mysqli ("localhost","root","","user");
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>Halaman Outlet</title>
+	<title>halaman produk</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -193,8 +193,7 @@ $koneksi = new mysqli ("localhost","root","","user");
 					</div>
 				</div>
 
-
-
+			
 				<div class="reset-options pt-30 text-center">
 					<button class="btn btn-danger" id="reset-settings">Reset Settings</button>
 				</div>
@@ -278,15 +277,23 @@ $koneksi = new mysqli ("localhost","root","","user");
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
 							<div class="dropdown">
-						     	</div>
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									January 2018
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<!-- Simple Datatable start -->
 				<div class="card-box mb-30">
 					<div class="pd-20">
-						<h4 class="text-blue h4">Data Outlet</h4>
-						<a href="add.php" class="btn btn-info icon-copy fa fa-user-circle-o"> Tambah Data</a>
+						<h4 class="text-blue h4">Data PRODUK</h4>
+						<a href="produk_tambah.php" class="btn btn-primary">Tambah Data +</a>
 					</div>
 					<div class="pb-20">
 						<table class="data-table table stripe hover nowrap">
@@ -294,15 +301,16 @@ $koneksi = new mysqli ("localhost","root","","user");
 								<tr>
 								
 									<th>NO</th>
+									<th>ID PAKET</th>
 									<th>ID OUTLET</th>
-									<th>NAMA</th>
-									<th>ALAMAT</th>
-									<th>NO.TELEPON</th>
+									<th>JENIS_PAKET</th>
+									<th>NAMA PAKET</th>
+									<th>HARGA</th>
 									<th class="datatable-nosort">Action</th>
 									</thead>
 										<tbody>
 											<?php
-												$sql_tampil = "SELECT * FROM tb_outlets";
+												$sql_tampil = "SELECT * FROM tb_paket";
 												$query_tampil = mysqli_query($koneksi, $sql_tampil);
 												$no=1;
 												while ($data = mysqli_fetch_array($query_tampil,MYSQLI_BOTH)) {
@@ -310,26 +318,30 @@ $koneksi = new mysqli ("localhost","root","","user");
 											<tr>
 												<td>
 													<?php echo $no; ?>
+												
+												</td>
+												<td>
+												<?php echo $data['id']; ?>
 												</td>
 												<td>
 												<?php echo $data['id_outlet']; ?>
 												</td>
 												<td>
-													<?php echo $data['nama']; ?>
+													<?php echo $data['jenis_paket']; ?>
 												</td>
 												<td>
-													<?php echo $data['alamat']; ?>
+													<?php echo $data['nama_paket']; ?>
 												</td>
 												<td>
-													<?php echo $data['tlp']; ?>
+													<?php echo $data['harga']; ?>
 												</td>
 									
 
 
 												<td>
-													<a href="edit.php?id_outlet=<?php echo $data['id_outlet']; ?>" class="-am-pm-btn btn-warning btn-sm icon-copy fa fa-pencil"><b>Ubah</a>
-													<a href="del.php?id_outlet=<?php echo $data['id_outlet']; ?>" onclick="return confirm('Yakin Ingin Hapus Data Ini ?')"
-													class="-am-pm-btn btn-danger btn-sm icon-copy fa fa-trash"><b> Hapus</a>
+													<a href="produk_ubah.php?kode=<?php echo $data['id']; ?>" class='-am-pm-btn btn-warning btn-sm icon-copy fa fa-pencil'>Ubah</a>
+													<a href="produk_delete.php?kode=<?php echo $data['id']; ?>" onclick="return confirm('Hapus Data Ini ?')"
+													class='-am-pm-btn btn-danger btn-sm icon-copy fa fa-trash'>Hapus</a>
 												</td>
 											</tr>
 											<?php
@@ -356,7 +368,7 @@ $koneksi = new mysqli ("localhost","root","","user");
 				<!-- Simple Datatable End -->
                 </div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
-				<center><B>Aplikasi Laundry Alakadarnya <a href="https://github.com/dropways" target="_blank">BY KELOMPOK 5</a></center>
+				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
 			</div>
 		</div>
 	</div>

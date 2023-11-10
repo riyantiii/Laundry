@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
-<?php
-$koneksi = new mysqli ("localhost","root","","user");
-?>
-
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>Halaman Outlet</title>
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -193,7 +189,33 @@ $koneksi = new mysqli ("localhost","root","","user");
 					</div>
 				</div>
 
-
+				<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
+				<div class="sidebar-radio-group pb-30 mb-10">
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-1" name="menu-list-icon" class="custom-control-input" value="icon-list-style-1" checked="">
+						<label class="custom-control-label" for="sidebariconlist-1"><i class="ion-minus-round"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-2" name="menu-list-icon" class="custom-control-input" value="icon-list-style-2">
+						<label class="custom-control-label" for="sidebariconlist-2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-3" name="menu-list-icon" class="custom-control-input" value="icon-list-style-3">
+						<label class="custom-control-label" for="sidebariconlist-3"><i class="dw dw-check"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-4" name="menu-list-icon" class="custom-control-input" value="icon-list-style-4" checked="">
+						<label class="custom-control-label" for="sidebariconlist-4"><i class="icon-copy dw dw-next-2"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-5" name="menu-list-icon" class="custom-control-input" value="icon-list-style-5">
+						<label class="custom-control-label" for="sidebariconlist-5"><i class="dw dw-fast-forward-1"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-6" name="menu-list-icon" class="custom-control-input" value="icon-list-style-6">
+						<label class="custom-control-label" for="sidebariconlist-6"><i class="dw dw-next"></i></label>
+					</div>
+				</div>
 
 				<div class="reset-options pt-30 text-center">
 					<button class="btn btn-danger" id="reset-settings">Reset Settings</button>
@@ -225,7 +247,7 @@ $koneksi = new mysqli ("localhost","root","","user");
 							<span class="micon dw dw-book"></span><span class="mtext">Outlet</span>
 						</a>
 						<li>
-						<a href="produk.php" class="dropdown-toggle no-arrow">
+						<a href="calendar.html" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-invoice"></span><span class="mtext">Produk/Paket cucian</span>
 						</a>
 
@@ -260,103 +282,120 @@ $koneksi = new mysqli ("localhost","root","","user");
 	</div>
 	<div class="mobile-menu-overlay"></div>
     
-<div class="main-container">
+	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
 				<div class="page-header">
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>DataTable</h4>
+								<h4>Form</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">DataTable</li>
+									<li class="breadcrumb-item active" aria-current="page">Form</li>
 								</ol>
 							</nav>
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
 							<div class="dropdown">
-						     	</div>
-						</div>
-					</div>
-				</div>
-				<!-- Simple Datatable start -->
-				<div class="card-box mb-30">
-					<div class="pd-20">
-						<h4 class="text-blue h4">Data Outlet</h4>
-						<a href="add.php" class="btn btn-info icon-copy fa fa-user-circle-o"> Tambah Data</a>
-					</div>
-					<div class="pb-20">
-						<table class="data-table table stripe hover nowrap">
-							<thead>
-								<tr>
-								
-									<th>NO</th>
-									<th>ID OUTLET</th>
-									<th>NAMA</th>
-									<th>ALAMAT</th>
-									<th>NO.TELEPON</th>
-									<th class="datatable-nosort">Action</th>
-									</thead>
-										<tbody>
-											<?php
-												$sql_tampil = "SELECT * FROM tb_outlets";
-												$query_tampil = mysqli_query($koneksi, $sql_tampil);
-												$no=1;
-												while ($data = mysqli_fetch_array($query_tampil,MYSQLI_BOTH)) {
-											?>
-											<tr>
-												<td>
-													<?php echo $no; ?>
-												</td>
-												<td>
-												<?php echo $data['id_outlet']; ?>
-												</td>
-												<td>
-													<?php echo $data['nama']; ?>
-												</td>
-												<td>
-													<?php echo $data['alamat']; ?>
-												</td>
-												<td>
-													<?php echo $data['tlp']; ?>
-												</td>
-									
-
-
-												<td>
-													<a href="edit.php?id_outlet=<?php echo $data['id_outlet']; ?>" class="-am-pm-btn btn-warning btn-sm icon-copy fa fa-pencil"><b>Ubah</a>
-													<a href="del.php?id_outlet=<?php echo $data['id_outlet']; ?>" onclick="return confirm('Yakin Ingin Hapus Data Ini ?')"
-													class="-am-pm-btn btn-danger btn-sm icon-copy fa fa-trash"><b> Hapus</a>
-												</td>
-											</tr>
-											<?php
-												$no++;
-												}
-											?>
-										</tbody>
-									</table>
-
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									January 2018
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
 								</div>
 							</div>
 						</div>
-
-					</body>
-
-					</html>
-					<!-- Elseif Channel -->
-									
-										
-							</tbody>
-						</table>
 					</div>
 				</div>
-				<!-- Simple Datatable End -->
-                </div>
+				<div class="invoice-wrap">
+					<div class="invoice-box">
+						<div class="invoice-header">
+							<div class="logo text-center">
+								<img src="vendors/images/deskapp-logo.png" alt="">
+							</div>
+						</div>
+						<h4 class="text-center mb-30 weight-600">TRANSAKSI LAUNDRY SKYRAM</h4>
+						<div class="row pb-30">
+							<div class="col-md-6">
+								<h5 class="mb-15">Nama Pelanggan</h5>
+								<p class="font-14 mb-5">Tanggal: <strong class="weight-600">2 Nov 2023</strong></p>
+								<p class="font-14 mb-5">No: <strong class="weight-600">4556</strong></p>
+							</div>
+							<div class="col-md-6">
+								<div class="text-right">
+									<p class="font-14 mb-5">Akhmad Nauval </strong></p>
+									<p class="font-14 mb-5">Pengarengan Kidul</p>
+									<p class="font-14 mb-5">Cirebon</p>
+									<p class="font-14 mb-5">Kodepos</p>
+								</div>
+							</div>
+						</div>
+						<div class="invoice-desc pb-30">
+							<div class="invoice-desc-head clearfix">
+								<div class="invoice-sub">Deskripsi</div>
+								<div class="invoice-rate">Harga</div>
+								<div class="invoice-hours">Satuan</div>
+								<div class="invoice-subtotal">Subtotal</div>
+							</div>
+							<div class="invoice-desc-body">
+								<ul>
+									<li class="clearfix">
+										<div class="invoice-sub">Laundry Premium</div>
+										<div class="invoice-rate">$20</div>
+										<div class="invoice-hours">100</div>
+										<div class="invoice-subtotal"><span class="weight-600">$2000</span></div>
+									</li>
+									<li class="clearfix">
+										<div class="invoice-sub">Laundy Celana</div>
+										<div class="invoice-rate">$20</div>
+										<div class="invoice-hours">100</div>
+										<div class="invoice-subtotal"><span class="weight-600">$2000</span></div>
+									</li>
+									<li class="clearfix">
+										<div class="invoice-sub">Laundry Baju</div>
+										<div class="invoice-rate">$20</div>
+										<div class="invoice-hours">100</div>
+										<div class="invoice-subtotal"><span class="weight-600">$2000</span></div>
+									</li>
+									<li class="clearfix">
+										<div class="invoice-sub">Laundry Selimut</div>
+										<div class="invoice-rate">$20</div>
+										<div class="invoice-hours">100</div>
+										<div class="invoice-subtotal"><span class="weight-600">$2000</span></div>
+									</li>
+								</ul>
+							</div>
+							<div class="invoice-desc-footer">
+								<div class="invoice-desc-head clearfix">
+									<div class="invoice-sub">Bank</div>
+									<div class="invoice-rate">Nama Kasir</div>
+									<div class="invoice-subtotal">Total</div>
+								</div>
+								<div class="invoice-desc-body">
+									<ul>
+										<li class="clearfix">
+											<div class="invoice-sub">
+												<p class="font-14 mb-5">BRI: <strong class="weight-600">123 456 789</strong></p>
+												<p class="font-14 mb-5">BCA: <strong class="weight-600">4556</strong></p>
+											</div>
+											<div class="invoice-rate font-20 weight-600">Riyanti</div>
+											<div class="invoice-subtotal"><span class="weight-600 font-24 text-danger">$8000</span></div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<h4 class="text-center pb-20">Thank You!!</h4>
+					</div>
+				</div>
+			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
-				<center><B>Aplikasi Laundry Alakadarnya <a href="https://github.com/dropways" target="_blank">BY KELOMPOK 5</a></center>
+				
 			</div>
 		</div>
 	</div>
@@ -365,18 +404,5 @@ $koneksi = new mysqli ("localhost","root","","user");
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
 	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="vendors/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<!-- buttons for Export datatable -->
-	<script src="vendors/src/plugins/datatables/js/dataTables.buttons.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/buttons.print.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/buttons.html5.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/buttons.flash.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/pdfmake.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/vfs_fonts.js"></script>
-	<!-- Datatable Setting js -->
-	<script src="vendors/scripts/datatable-setting.js"></script></body>
+</body>
 </html>

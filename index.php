@@ -122,24 +122,17 @@
 			<div class="col-lg-6 mr-auto align-self-center">
 				<div class="feature-content">
 					<!-- Feature Title -->
-					<h2>Sabun Laundry premium <a
+					<div class="testimonial">Sabun Laundry premium <a
 							href="https://themefisher.com/products/small-apps-free-app-landing-page-template/"></a></h2>
 					<!-- Feature Description -->
-					<p class="desc">Sabun yang kami gunakan berkualitas premium.</p>
+					<p class="desc">Sabun yang kami gunakan berkualitas premium. sehingga tidak merusak warna baju dan harumnya awet sampai seharian.</p>
 				</div>
 				<!-- Testimonial Quote -->
 				<div class="testimonial">
 					<p>
-						"InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one
-						place."
+						
 					</p>
-					<ul class="list-inline meta">
-						<li class="list-inline-item">
-							<img src="images/thumbs/baju.jpg" alt="">
-						</li>
-						<li class="list-inline-item">Jonathon Andrew , Themefisher.com</li>
-					</ul>
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -151,23 +144,17 @@
 			<div class="col-lg-6 ml-auto align-self-center">
 				<div class="feature-content">
 					<!-- Feature Title -->
-					<h2>Pembersihan  Noda <a
+					<div class="testimonial">Pembersihan  Noda <a
 							href="https://themefisher.com/products/small-apps-free-app-landing-page-template/"></a></h2>
 					<!-- Feature Description -->
-					<p>laundry premium akan membedakan pakaian yang bisa dicuci dengan mesin wet cleaning atau dry cleaning berdasarkan jenis bahan dan label perawatan yang melekat. Jadi, deterjen saja tidak cukup untuk memberikan perawatan terbaik untuk pakaian kesayangan Anda.</p>
+					</div>
 				</div>
 				<!-- Testimonial Quote -->
 				<div class="testimonial">
 					<p>
-						"InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one
-						place."
+					laundry premium akan membedakan pakaian yang bisa dicuci dengan mesin wet cleaning atau dry cleaning berdasarkan jenis bahan dan label perawatan yang melekat. Jadi, deterjen saja tidak cukup untuk memberikan perawatan terbaik untuk pakaian kesayangan Anda
 					</p>
-					<ul class="list-inline meta">
-						<li class="list-inline-item">
-							<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="">
-						</li>
-						<li class="list-inline-item">Jonathon Andrew , Themefisher.com</li>
-					</ul>
+				
 				</div>
 			</div>
 			<div class="col-lg-6 mr-auto justify-content-center">
@@ -189,7 +176,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="section-title">
-					<h2>Pengemesan yang rapi</h2>
+				<div class="testimonial">Pengemesan yang rapi</h2>
 					<p align="justify"><a href=""</a> Yang perlu kita ketahui sebagai konsumen, selalu pastikan label perawatan yang ada pada pakaian yang kita beli. Apabila pakaian tersebut memerlukan perlakuan khusus, atau tidak mungkin dibersihkan sendiri, serahkanlah ke penyedia layanan laundry premium, terutama jika pakaian memiliki nilai harga yang tinggi.</p>
 				</div>
 			</div>

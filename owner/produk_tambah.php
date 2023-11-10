@@ -19,11 +19,15 @@ $koneksi = new mysqli ("localhost","root","","user");
 			<div class="page-header">
 				<br>
 				<br>
-				<h2>TAMBAH DATA OUTLET</h2>
+				<h2>TAMBAH DATA PRODUK/PAKET</h2>
 			</div>
 			<br>
 			<form method="POST" enctype="multipart/form-data">
 				
+			<div class="form-group">
+					<label>ID PAKET</label>
+					<input type="text" name="id" class="form-control"  required>
+				</div>
 
 				<div class="form-group">
 					<label><b>ID OUTLET</label>
@@ -31,25 +35,33 @@ $koneksi = new mysqli ("localhost","root","","user");
 				</div>
 
 				<div class="form-group">
-					<label><b>NAMA</label>
-					<input type="text" name="nama" class="form-control" required>
+					<label>JENIS </label>
+					<select name="jenis_paket" class="form-control">
+						<option value="jenis_paket">- Pilih PAKET-</option>
+						<option>Kiloan</option>
+						<option>Selimut</option>
+						<option>Bed Cover</option>
+						<option>Kaos</option>
+						<option>Lain</option>
+					</select>
 				</div>
 
 
+
 				<div class="form-group">
-					<label><b>ALAMAT</label>
-					<input type="text" name="alamat" class="form-control" required>
+					<label><b>NAMA PAKET</label>
+					<input type="text" name="nama_paket" class="form-control" required>
 				</div>
 
 				<div class="form-group">
-					<label><b>NO TELEPON</label>
-					<input type="text" name="tlp" class="form-control" required>
+					<label><b>HARGA</label>
+					<input type="text" name="harga" class="form-control" required>
 				</div>
 
 
 				<div class="form-group">
 					<input type="submit" name="Simpan" value="Simpan Data" class="btn btn-primary">
-					<a href="outlet.php" class="btn btn-warning">Batal</a>
+					<a href="produk.php" class="btn btn-warning">Batal</a>
 				</div>
 			</form>
 		</div>
@@ -60,20 +72,20 @@ $koneksi = new mysqli ("localhost","root","","user");
 <?php	
     if (isset ($_POST['Simpan'])){
 
-        
-        $sql_simpan = "INSERT INTO tb_outlets (`id_outlet`, `nama`, `alamat`, `tlp`) VALUES (
+        $sql_simpan = "INSERT INTO tb_paket (`id`, `id_outlet`, `jenis_paket`, `nama_paket`, `harga`) VALUES (
+			'".$_POST['id']."',
 			'".$_POST['id_outlet']."',
-			'".$_POST['nama']."',
-			'".$_POST['alamat']."',
-			'".$_POST['tlp']."')";
+			'".$_POST['jenis_paket']."',
+			'".$_POST['nama_paket']."',
+			'".$_POST['harga']."')";
 		$query_simpan = mysqli_query($koneksi, $sql_simpan);
 
         if ($query_simpan) {
             echo "<script>alert('Tambah Data Sukses')</script>";
-            echo "<meta http-equiv='refresh' content='0; url=outlet.php'>";
+            echo "<meta http-equiv='refresh' content='0; url=produk.php'>";
         }else{
             echo "<script>alert('Tambah Data Gagal')</script>";
-            echo "<meta http-equiv='refresh' content='0; url=add.php'>";
+            echo "<meta http-equiv='refresh' content='0; url=produk_tambah.php'>";
         }
         }
 ?>
