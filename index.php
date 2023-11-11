@@ -63,7 +63,6 @@
 		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
 		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
 		<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
-		<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
 		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
 		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
 	</div>
