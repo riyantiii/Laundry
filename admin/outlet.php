@@ -231,7 +231,7 @@ $koneksi = new mysqli ("localhost","root","","user");
 
 
 					<li>
-						<a href="sitemap.html" class="dropdown-toggle no-arrow">
+						<a href="pengguna.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-user"></span><span class="mtext">Pengguna</span>
 						</a>
 					</li>

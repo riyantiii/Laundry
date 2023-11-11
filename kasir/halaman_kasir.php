@@ -31,11 +31,11 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
-	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="vendors/src/plugins/datatables/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" type="text/css" href="vendors/src/plugins/datatables/css/responsive.bootstrap4.min.css">
-	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../admin/vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="../admin/vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../admin/vendors/src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../admin/vendors/src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../admin/vendors/styles/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -50,7 +50,7 @@
 <body>
 	<div class="pre-loader">
 	<div class="pre-loader-box">
-	<div class="loader-logo"><img src="vendors/images/kk.png" alt=""></div>
+	<div class="loader-logo"><img src="../admin/vendors/images/kk.png" alt=""></div>
 	<div class='loader-progress' id="progress_div">
 	<div class='bar' id='bar1'></div>
 	</div>
@@ -115,10 +115,56 @@
 	<!-- Pesan -->
 	<div class="user-notification">
 	<div class="dropdown">
-		<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown"></a>
+		<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+		<i class="icon-copy dw dw-notification"></i>
+		<span class="badge notification-active"></span>
+					</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<div class="notification-list mx-h-350 customscroll">
-							
+							<ul>
+								<li>
+									<a href="#">
+										<img src="vendors/images/img.jpg" alt="">
+										<h3>John Doe</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="vendors/images/photo1.jpg" alt="">
+										<h3>Lea R. Frith</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="vendors/images/photo2.jpg" alt="">
+										<h3>Erik L. Richards</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="vendors/images/photo3.jpg" alt="">
+										<h3>John Doe</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="vendors/images/photo4.jpg" alt="">
+										<h3>Renee I. Hansen</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="vendors/images/img.jpg" alt="">
+										<h3>Vicki M. Coleman</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -127,7 +173,7 @@
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 						<span class="user-icon">
-							<img src="vendors/images/tyy.jpg" alt="">
+							<img src="../admin/vendors/images/tyy.jpg" alt="">
 						</span>
 						<span class="user-name">Riyanti</span>
 					</a>
@@ -198,8 +244,8 @@
 	<div class="left-side-bar">
 		<div class="brand-logo">
 			<a href="index.html">
-				<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-				<img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+				<img src="../admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
+				<img src="../admin/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -213,16 +259,6 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Dashboard</span>
 						</a>
 						
-					<li>
-						<a href="outlet.php" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-book"></span><span class="mtext">Outlet</span>
-						</a>
-						<li>
-						<a href="produk.php" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-invoice"></span><span class="mtext">Produk/Paket cucian</span>
-						</a>
-
-
 					<li>
 						<a href="pengguna.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-user"></span><span class="mtext">Pengguna</span>
@@ -258,13 +294,13 @@
 			<div class="card-box pd-20 height-100-p mb-30">
 				<div class="row align-items-center">
 					<div class="col-md-4">
-						<img src="vendors/images/banner-img.png" alt="">
+						<img src="../admin/vendors/images/banner-img.png" alt="">
 					</div>
 					<div class="col-md-8">
 						<h4 class="font-20 weight-500 mb-10 text-capitalize">
-							Selamat Datang <div class="weight-600 font-30 text-blue">Riyanti!</div>
+							Selamat Datang <div class="weight-600 font-30 text-blue">Yanxi!</div>
 						</h4>
-						<p class="font-18 max-width-600">Anda login sebagai admin, anda memiliki hak penuh terhadap sistem.</p>
+						<p class="font-18 max-width-600">Anda login sebagai kasir.</p>
 					</div>
 				</div>
 			</div>
@@ -319,15 +355,15 @@
 		<div class="weight-600 font-14">Worth</div>
 		</div>
 	<!-- js -->
-	<script src="vendors/scripts/core.js"></script>
-	<script src="vendors/scripts/script.min.js"></script>
-	<script src="vendors/scripts/process.js"></script>
-	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="vendors/src/plugins/apexcharts/apexcharts.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="vendors/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<script src="vendors/scripts/dashboard.js"></script>
+	<script src="../admin/vendors/scripts/core.js"></script>
+	<script src="../admin/vendors/scripts/script.min.js"></script>
+	<script src="../admin/vendors/scripts/process.js"></script>
+	<script src="../admin/vendors/scripts/layout-settings.js"></script>
+	<script src="../admin/vendors/src/plugins/apexcharts/apexcharts.min.js"></script>
+	<script src="../admin/vendors/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../admin/vendors/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../admin/vendors/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../admin/vemdors/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<script src="../admin/vendors/scripts/dashboard.js"></script>
 </body>
 </html>
